@@ -30,3 +30,5 @@ face-mask-detection/
 ├── face_mask_detector_model.h5
 ├── app.py
 ├── requirements.txt
+
+![Screenshot (496)](https://github.com/user-attachments/assets/4be2fa49-66ee-4178-86b1-b33ec08cd7bc)
