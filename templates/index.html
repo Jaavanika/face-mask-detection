@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Mask Detection</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fff8f0;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #d26a5c;
+        }
+
+        h2 {
+            color: #8a4f3d;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff3e0;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .button {
+            background-color: #f4a261;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 25px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #e76f51;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        img {
+            border-radius: 10px;
+            margin-top: 10px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        hr {
+            margin: 40px 0;
+            border: none;
+            border-top: 1px solid #ddd;
+        }
+
+        form {
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Face Mask Detection System 😷</h1>
+
+        <div class="form-group">
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" accept="image/*" required>
+                <button type="submit" class="button">Upload Image</button>
+            </form>
+        </div>
+
+        {% if result %}
+            <h2>Result: {{ result }}</h2>
+            <img src="{{ image_path }}" alt="Uploaded Image" width="300">
+        {% endif %}
+
+        <hr>
+
+        <div class="form-group">
+            <form action="/start_detection">
+                <button type="submit" class="button">Start Live Detection</button>
+            </form>
+            <form action="/stop">
+                <button type="submit" class="button">Stop Detection</button>
+            </form>
+            <form action="/switch_camera">
+                <button type="submit" class="button">Switch Camera</button>
+            </form>
+        </div>
+
+        {% if video_active %}
+            <h2>Live Feed:</h2>
+            <img src="{{ url_for('video_feed') }}" width="640" height="480">
+        {% endif %}
+    </div>
+</body>
+</html>
