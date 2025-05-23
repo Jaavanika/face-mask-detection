@@ -32,3 +32,8 @@ face-mask-detection/
 ├── requirements.txt
 
 ![Screenshot (496)](https://github.com/user-attachments/assets/4be2fa49-66ee-4178-86b1-b33ec08cd7bc)
+![Screenshot (497)](https://github.com/user-attachments/assets/75d82920-d498-435f-90d1-ca3e459307c8)
+https://github.com/user-attachments/assets/e298319a-4d7e-4d2a-84d1-2dc2d22a881c
+
+
+
