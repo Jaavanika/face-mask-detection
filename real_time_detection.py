@@ -2,11 +2,10 @@ import cv2
 import numpy as np
 from tensorflow.keras.models import load_model
 
-# Load the trained model and Haar cascade
 model = load_model("face_mask_detector_model.h5")
 face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
-# Start the webcam
+
 cap = cv2.VideoCapture(0)
 
 while True:
