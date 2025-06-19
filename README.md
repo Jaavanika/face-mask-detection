@@ -1,4 +1,7 @@
 # face-mask-detection
+
+The trained .h5 model file is too large for GitHub, so it has been uploaded to Google Drive: https://drive.google.com/drive/folders/1tl_lbBayMunV6aFvdmM-A5WrZIQF29U8?usp=sharing
+
 face mask detection using live systems
 
 1. Installation
